@@ -1,329 +1,175 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-
-    <link rel="stylesheet" href="../static/css/index.css" >
-    <link rel="stylesheet" href="../../static/css/base.css">
-    <link rel="stylesheet" type="text/css" href="../../static/css/style.css">
-    <script src="../static/js/index.js"></script>
-
-    <link rel="stylesheet" href="../../static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../static/css/global-styles.css">
-    <script src="../../static/js/bootstrap.min.js"></script>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-
-    <style>
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:10}
-.mySlides {display: none}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
-</style>
-
-
-    <style>
-        body {background: url(https://html5book.ru/wp-content/uploads/2015/10/background54.png)}
-
-    </style>
-
-    <style>
-    .fig {text-align: left;}
-    </style>
-    <style>
-    .block-container {
-                    position: relative;
-                    float: left;
-                    margin: 2px;
-    }
-    .block-container, .block-container div, .block-container img { width: 220px; height: 400px; object-fit: cover; }
-    .block-container div, .block-container img { position: absolute; }
-    .block-container img {z-index: 1000;}
-    .block-front {
-                    z-index: 1001;
-                    background-color: black;
-                    transition: all 0.4s ease-in-out 0s;
-                    opacity: 0;
-                    color: white;
-                    cursor: pointer;
-    }
-    .block-front:hover { opacity: .8; }
-    .block-front span {
-                    display: block;
-                    font-weight: bold;
-                    padding: 60px 0;
-                    text-align: center;
-    }
-    </style>
-    <script>
-    $(document).ready(function(){
-        $("a[href*=#]").on("click", function(e){
-            var anchor = $(this);
-            $('html, body').stop().animate({
-                scrollTop: $(anchor.attr('href')).offset().top - 65
-            }, 777);
-            e.preventDefault();
-            return false;
-        });
-    });
-</script>
-    <title>Simple Campus</title>
+	<title> Simple Campus</title>
+	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" media="screen and (color)" href="example.css">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 </head>
+<body>
+	<div class="wrapper">
+		<nav class="nav">
+			<div class="container">
+				<div class="nav__row">
+					<p class="nav__logo">
+					<a href = "index.html"> </a>
+					<img src = "img/logo.png" class="header__logo">
+					</p>
 
-<div class="container mt-3">
-        <div class="row text-center">
-            <div class="col-sm-12 col-md">
-                <a href="#discount" class="some_link;  text-dark " style="font-size: large">Акции</a>
-            </div>
-            <div class="col-sm-12 col-md">
-                <a href="#set" class="text-dark" style="font-size: large">Сэты</a>
-            </div>
-            <div class="col-sm-12 col-md">
-                <a href="#work" class="text-dark" style="font-size: large">Работать курьером</a>
-            </div>
-            <div class="col-sm-12 col-md">
-                <a href="#about_our" class="text-dark" style="font-size: large">О нас</a>
-            </div>
-        </div>
-    </div>
+					<div class="nav__menu menu">
+							<nav class="menu__body">
+								<ul class="nav__menu__list">
+									<li><a href="" class="nav__menu__link">Акции</a></li>
+									<li><a href="" class="nav__menu__link">Сеты</a></li>
+									<li><a href="" class="nav__menu__link">Работать с нами</a></li>
+									<li><a href="" class="nav__menu__link">О нас</a></li>
+								</ul>
+							</nav>
+					</div>
 
-<body id="top">
-    <a href="#top" style="position: fixed;bottom: 15px;right: 20px; ">Наверх</a>
-
-{#    <!-- HEADER -->#}
-{#    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">#}
-{#        <a class="navbar-brand" href="http://127.0.0.1:8000/"  >Simple Campus</a>#}
-{#        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">#}
-{#            <span class="navbar-toggler-icon"></span>#}
-{#        </button>#}
-{#        <div class="collapse navbar-collapse" id="navbarNav">#}
-{#            {% if request.user.is_authenticated %}#}
-{#                <ul class="navbar-nav ml-auto">#}
-{#                    <li {% if section == "dashboard" %} class="nav-item"{% endif %}>#}
-{#                        <form action="{% url "dashboard" %}">#}
-{#                            <button type="submit" class="button-link">Профиль</button>#}
-{#                        </form>#}
-{#                    </li>#}
-{#                    <form action="{% url "logout" %}">#}
-{#                        <button type="submit" class="button-link">Выйти</button>#}
-{#                    </form>#}
-{#                    </ul>#}
-{#            {% else %}#}
-{#                <ul class="navbar-nav ml-auto">#}
-{#                    <button type="button" class="button-link" data-toggle="modal" data-target="#exampleModalScrollable">Войти</button>#}
-{#                    <button type="button" class="button-link" data-toggle="modal" data-target="#exampleModalScrollable1">Регистрация</button>#}
-{#                </ul>#}
-{#        </div>#}
-{#        {% endif %}#}
-{#    </nav>#}
-
-{#    <!-- Modal -->#}
-{#    <div class="modal fade bd-example-modal-sm" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">#}
-{#        <div class="modal-dialog modal-sm modal-dialog-centered" role="document">#}
-{#            <div class="modal-content">#}
-{#               <div class="modal-header">#}
-{#                  <h5 class="modal-title" id="exampleModalScrollableTitle" style="color: blue">Вход</h5>#}
-{#                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">#}
-{#                      <span aria-hidden="true">&times;</span>#}
-{#                  </button>#}
-{#               </div>#}
-{#               <div class="modal-body">#}
-{#                   <div class="registration-form">#}
-{#                       <form action="{% url "login" %}?next={{ current_url }}" method="POST">#}
-{#                           {% csrf_token %}#}
-{#                           <p><input id="username-field" name="username" placeholder="Username" type="text" /></p>#}
-{#                           <p><input id="password-field" name="password" placeholder="Enter Password" type="password" /></p>#}
-{#                           <p><input type="submit" value="Войти"></p>#}
-{#                       </form>#}
-{#                  </div>#}
-{#              </div>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-{##}
-{#        <!-- Modal -->#}
-{#        <div class="modal fade bd-example-modal-sm" id="exampleModalScrollable1" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">#}
-{#          <div class="modal-dialog modal-sm modal-dialog-centered" role="document">#}
-{#            <div class="modal-content">#}
-{#              <div class="modal-header">#}
-{#                <h5 class="modal-title" id="exampleModalScrollableTitle" style="color: blue">Регистрация</h5>#}
-{#                <button type="button" class="close" data-dismiss="modal" aria-label="Close">#}
-{#                  <span aria-hidden="true">&times;</span>#}
-{#                </button>#}
-{#              </div>#}
-{#              <div class="modal-body">#}
-{#                    <div class="registration-form">#}
-{#                        <p style="color: blue">Пожалуйста, зарегистрируйтесь используя следующую форму:</p>#}
-{#                        <form action="{% url "register" %}?next={{ current_url }}" method="POST">#}
-{#                            {% csrf_token %}#}
-{#                            <p><input id="username" name="username" placeholder="Username"type="text" /></p>#}
-{#                            <p><input id="first_name" name="first_name" placeholder="First Name"type="text" /></p>#}
-{#                            <p><input id="last_name" name="last_name" placeholder="Last Name"type="text" /></p>#}
-{#                            <p><input id="email" name="email" placeholder="Email"type="text" /></p>#}
-{#                            <p><input id="password" name="password" placeholder="Enter Password"type="password" /></p>#}
-{#                            <p><input id="password2" name="password2" placeholder="Repeat Password"type="password" /></p>#}
-{#                            <p><input type="submit" value="Войти"></p>#}
-{#                        </form>#}
-{#                    </div>#}
-{#              </div>#}
-{#            </div>#}
-{#          </div>#}
-{#        </div>#}
-
-
-
-
-    <div class="slideshow-container">
-
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="../media/1.jpg" style="width:100%">
-  <div class="text">Caption Text</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="../media/2.jpg" style="width:100%">
-  <div class="text">Caption Two</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="../media/3.jpg" style="width:100%">
-  <div class="text">Caption Three</div>
-</div>
-
-<a class="prev" onclick="plusSlides(-1)">❮</a>
-<a class="next" onclick="plusSlides(1)">❯</a>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
-
-<script>
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-</script>
-
-    <br> <br> <br>
-
-
+				</div>
+			</div>
+		</nav>
+		<header class="header">
+			<div class="container">
+				<div class="header__row">
+					<div class="header__menu menu">
+							<div class="hiden_menu__icon hiden_icon-menu">
+								<span></span>
+							</div>
+							<nav class="menu__body">
+								<ul class="header__menu__list">
+									<li> <div class="menu__icon icon-menu"> <span> </span> </div></li>
+									<li><p class="header__text">Каталог товаров</p></li>
+									<li>
+										<div class="search">
+									    	<input type="search" name="" class = "inp" placeholder="Яблочный сок">
+									    	<input type="submit" value="hhh ">
+									   </div>
+									   <!--  style="background-image: url(image.png); -->
+									</li>
+									<li><a href="" class="header__menu__link"></a></li>
+									<li><a href="" class="header__menu__link"></a></li>
+									<li><a href="" class="header__menu__link"></a></li>
+									<li><a href="" class="header__menu__link"></a></li>
+								</ul>
+							</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<div class="container">
+				<div class="three-block">
+					<h1 class="three-block__title">Я люблю свою жизнь.</h1>
+					<div class="three-block__row">
+						<div class="three-block__column">
+							<div class="three-block__item">
+								<div class="three-block__image">
+								</div>
+								<div class = "block__title">
+									<div class="three-block__text">
+										Я люблю свою жизнь.
+									</div>
+								</div>
+								<div class="block__text">
+										Я люблю свою жизнь. Я люблю свою жизнь. Я люблю свою жизнь. Я люблю свою жизнь. Я люблю свою жизнь. Я люблю свою жизнь. Я люблю свою жизнь. Я люблю свою жизнь. Я люблю свою жизнь. Я люблю свою жизнь.
+								</div>
+						</div>
+					</div>
+					<div class="three-block__column">
+						<div class="three-block__item">
+							<div class="three-block__image">
+							</div>
+							<div class = "block__title">
+								<div class="three-block__text">
+									Я люблю свою жизнь.
+								</div>
+							</div>
+							<div class="block__text">
+								Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.
+							</div>
+						</div>
+					</div>
+					<div class="three-block__column">
+						<div class="three-block__item">
+							<div class="three-block__image">
+							</div>
+							<div class = "block__title">
+								<div class="three-block__text">
+									Я люблю свою жизнь.
+								</div>
+							</div>
+								<div class="block__text">
+									Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="three-block">
+					<div class="three-block__row">
+						<div class="three-block__column">
+							<div class="three-block__item">
+								<div class="three-block__image">
+								</div>
+								<div class = "block__title">
+									<div class="three-block__text">
+										Я люблю свою жизнь.
+									</div>
+								</div>
+								<div class="block__text">
+									Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.
+								</div>
+							</div>
+						</div>
+						<div class="three-block__column">
+							<div class="three-block__item">
+								<div class="three-block__image">
+								</div>
+								<div class = "block__title">
+									<div class="three-block__text">
+										Я люблю свою жизнь.
+									</div>
+								</div>
+								<div class="block__text">
+									Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.
+								</div>
+							</div>
+						</div>
+						<div class="three-block__column">
+							<div class="three-block__item">
+								<div class="three-block__image">
+								</div>
+								<div class = "block__title">
+									<div class="three-block__text">
+										Я люблю свою жизнь.
+									</div>
+								</div>
+								<div class="block__text">
+										Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.Я люблю свою жизнь.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer">
+			<div class="container">
+				<div class="footer__row">
+					<div class="footer__text"></div>
+					<div class="footer__text"></div>
+					<div class="footer__text"></div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+			<!-- Подключаем файл JS скриптов -->
+		<script src="js/script.js"></script>
+	</div>
 </body>
 </html>
