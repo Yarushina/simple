@@ -29,12 +29,12 @@ body{
 
 @media (max-width:1200px){
 	.container{
-		max-width: 970px;
+		max-width: 1000px;
 	}
 }
 @media (max-width:992px){
 	.container{
-		max-width: 750px;
+		max-width: 800px;
 	}
 }
 @media (max-width:767px){
@@ -120,7 +120,7 @@ body{
 .search {
     width: 300px; 
     height: 30px;
-    margin-left: 20px;
+    margin-left: 30px;
     background-color: white;
     border-radius: 20px;
     display: inline-block;
@@ -156,7 +156,6 @@ input[type="search"] {
 .header__menu__link {
 	height: 20px;
 	width: 100px;
-	background-color: white;
 	display: block;
 	margin-left: 20px;
 }
@@ -194,6 +193,22 @@ input[type="search"] {
 .icon-menu:after{
 	bottom: 0;
 }
+
+.header__img{
+	width: 30px;
+	margin-left: 40px;
+}
+.busket{
+	display: inline-block;
+    vertical-align: top;
+  	display: flex;
+}
+
+.build{
+	color: white;
+	margin-top: 6px;
+	font-size: 11pt;
+}
 @media (max-width: 1200px){
 	.nav__menu__list li{
 		list-style: none;
@@ -205,10 +220,11 @@ input[type="search"] {
 	}
 
 	.header__menu__link {
-		height: 20px;
-		width: 10px;
-		background-color: white;
-		display: block;
+		width: 65px;
+	}
+
+	.header__img{
+		margin-left: 24px
 	}
 }
 
@@ -229,6 +245,15 @@ input[type="search"] {
 	.inp{
 		width: 150px;
 		font-size: 10pt;
+	}
+
+	.header__menu__link {
+		width: 40px;
+	}
+
+	.header__img{
+		width: 20px;
+		margin-left: 4px;
 	}
 }
 
