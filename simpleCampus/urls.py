@@ -17,7 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
 
+from MainPge.views import about_us, work
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('MainPge.urls')),
+    path('/about_us', about_us, name='about_us'),
+    path('work', work, name='work')
 ]
