@@ -1,1 +1,1 @@
-# [index](https://simple.github.io/templates/index.html)
+# [index](https://Yarushina.github.io/simple/templates/index.html)
