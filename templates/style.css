@@ -147,6 +147,7 @@ input[type="search"] {
 .btn { 
 	background-color: transparent;
 }
+
 .btn__img{
 	background-color: transparent;
 	width: 40%
@@ -219,6 +220,15 @@ input[type="search"] {
 
 	.header__text{
 		font-size: 19pt;
+	}
+
+	.search{
+		width: 200px;
+	}
+
+	.inp{
+		width: 150px;
+		font-size: 10pt;
 	}
 }
 
